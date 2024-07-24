@@ -18,6 +18,6 @@ public class BootStrapData implements CommandLineRunner {
     public void run(String... args) {
         System.out.println("labas");
 //        System.out.print(animeRepository.findAll());
-        System.out.println(animeRepository.findById(2l));
+        System.out.println(animeRepository.findById(1l));
     }
 }

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.Optional;
 
 @RestController
@@ -30,6 +31,19 @@ public class AnimeController {
     }
     @PostMapping
     public Anime createAnime(@RequestBody Anime anime){
+        System.out.println("hi");
+        System.out.println(anime);
+//        anime.setDescription("");
+//        anime.setEpisodes(1);
+//        anime.setNameEN("");
+//        anime.setNameJP("");
+//        anime.setReleaseDate("2024-12-10");
+//        anime.setStudio("");
+//        anime.setSourceId(2);
+        System.out.println("--------------------------------------------------");
+        System.out.println("--------------------------------------------------");
+        System.out.println("--------------------------------------------------");
+        System.out.println("--------------------------------------------------");
         return animeService.save(anime);
     }
 

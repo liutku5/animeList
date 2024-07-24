@@ -1,9 +1,5 @@
 package com.example.demo.model;
 
-
-
-
-
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -31,14 +27,14 @@ public class Anime {
     private String nameEN;
 
     @Column(name = "release_date")
-    private LocalDate releaseDate;
+    private String releaseDate;
 
 
     @Column(name = "source_id")
-    private Integer sourceId;
+    private long sourceId;
 
     @Column(name = "episodes")
-    private int episodes;
+    private long episodes;
 
     @Column(name = "description")
     private String description;
