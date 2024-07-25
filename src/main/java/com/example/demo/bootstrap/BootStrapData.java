@@ -16,8 +16,8 @@ public class BootStrapData implements CommandLineRunner {
     }
     @Override
     public void run(String... args) {
-        System.out.println("labas");
+//        System.out.println("labas");
 //        System.out.print(animeRepository.findAll());
-        System.out.println(animeRepository.findById(1l));
+//        System.out.println(animeRepository.findById(1l));
     }
 }

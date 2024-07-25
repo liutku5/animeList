@@ -40,6 +40,7 @@ public class AnimeController {
 //        anime.setReleaseDate("2024-12-10");
 //        anime.setStudio("");
 //        anime.setSourceId(2);
+//        anime.setImage("");
         System.out.println("--------------------------------------------------");
         System.out.println("--------------------------------------------------");
         System.out.println("--------------------------------------------------");
@@ -55,10 +56,11 @@ public class AnimeController {
             updateAnime.setNameJP(animeDetails.getNameJP());
             updateAnime.setNameEN(animeDetails.getNameEN());
             updateAnime.setReleaseDate(animeDetails.getReleaseDate());
-            updateAnime.setSourceId(animeDetails.getSourceId());
+            updateAnime.setSource(animeDetails.getSource());
             updateAnime.setEpisodes(animeDetails.getEpisodes());
             updateAnime.setDescription(animeDetails.getDescription());
             updateAnime.setStudio(animeDetails.getStudio());
+            updateAnime.setImage(animeDetails.getImage());
             return ResponseEntity.ok(animeService.save(updateAnime));
         }else{
             return ResponseEntity.notFound().build();
