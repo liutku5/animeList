@@ -1,12 +1,15 @@
 package com.example.demo.controllers;
 
 import com.example.demo.model.Anime;
+import com.example.demo.model.Source;
 import com.example.demo.services.AnimeService;
+import com.example.demo.services.SourceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -20,6 +23,20 @@ public class AnimeController {
     public Iterable<Anime> getAllAnime(){
         return animeService.findAll();
     }
+
+//    @GetMapping("/all")
+//    public List<Anime> getAllAnime() {
+//        Iterable<Anime> animeIterable = animeService.findAll();
+//        for (Anime anime : animeIterable) {
+//            SourceService sourceService = new SourceService();
+//            Source source = sourceService.findById(anime.getSource().getId()).orElse(null);
+//            if (source != null) {
+//                anime.setSource(source);
+//            }
+//        }
+//        return (List<Anime>) animeIterable;
+//    }
+
     @GetMapping("/{id}")
     public ResponseEntity<Anime> getAnimeById(@PathVariable Long id){
         Optional<Anime> anime = animeService.findById(id);
@@ -33,17 +50,6 @@ public class AnimeController {
     public Anime createAnime(@RequestBody Anime anime){
         System.out.println("hi");
         System.out.println(anime);
-//        anime.setDescription("");
-//        anime.setEpisodes(1);
-//        anime.setNameEN("");
-//        anime.setNameJP("");
-//        anime.setReleaseDate("2024-12-10");
-//        anime.setStudio("");
-//        anime.setSourceId(2);
-//        anime.setImage("");
-        System.out.println("--------------------------------------------------");
-        System.out.println("--------------------------------------------------");
-        System.out.println("--------------------------------------------------");
         System.out.println("--------------------------------------------------");
         return animeService.save(anime);
     }

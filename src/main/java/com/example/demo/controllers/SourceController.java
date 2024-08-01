@@ -34,9 +34,6 @@ public class SourceController {
         System.out.println(source);
 
         System.out.println("--------------------------------------------------");
-        System.out.println("--------------------------------------------------");
-        System.out.println("--------------------------------------------------");
-        System.out.println("--------------------------------------------------");
         return sourceService.save(source);
     }
 
